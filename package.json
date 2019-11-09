@@ -1,0 +1,8 @@
+{
+"name": " Furious Bot",
+"version": "1.2.1",
+"description": "Furious Bot",
+"main": "index.js",
+"author": "Swofty",
+"dependencies": {}
+}
