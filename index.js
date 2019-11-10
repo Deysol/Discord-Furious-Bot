@@ -8,7 +8,18 @@ client.on('ready', () => {
 const prefix = 'f!';
 client.login(process.env.TOKEN);
 
-// Prefix-Replys   
+// Prefix-Replys  
+client.on('message', function(message) {
+    if (message.content == "f!clear") {
+        if (message.member.hasPermission("MANAGE_MESSAGES")) {
+            message.channel.fetchMessages()
+               .then(function(list){
+                    message.channel.bulkDelete(list);
+                }, function(err){message.channel.send("ERROR: ERROR CLEARING CHANNEL.")})                        
+        }
+    }
+
+}); 
 client.on('message', message => {
   if (message.content === 'f!avatar') {
     message.reply(message.author.avatarURL);
@@ -16,7 +27,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'f!help') {
-   message.channel.send('**Commands** \n !help - *Helps you with the commands* \n !avatar - *Gives you your avatar* \n !kick - *Kicks the designated player* \n !ban - *Bans the designated player*');
+   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat*');
  }
 });
 client.on('message', message => {
