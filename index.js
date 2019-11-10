@@ -6,7 +6,7 @@ client.on('ready', () => {
     console.log(`Bot made by: Swofty`);
 });
 const prefix = 'f!';
-client.login(process.env.TOKEN);
+client.login('NjQyODk0ODExODYyNTMyMTI3.XcfdOg.v7IueW8sbVukp3ppHGk_Ws7A0c0');
 
 // Prefix-Replys   
 client.on('message', function(message) {
@@ -81,10 +81,10 @@ client.on('message', message => {
           console.error(err);
         });
       } else {
-        message.reply('That user isn't in this guild!');
+        message.reply('That user isnt in this guild!');
       }
     } else {
-      message.reply('You didn't mention the user to kick!');
+      message.reply('You didnt mention the user to kick!');
     }
   }
 });
@@ -104,10 +104,10 @@ client.on('message', message => {
           console.error(err);
         });
       } else {
-        message.reply('That user isn't in this guild!');
+        message.reply('That user isnt in this guild!');
       }
     } else {
-      message.reply('You didn't mention the user to ban!');
+      message.reply('You didnt mention the user to ban!');
     }
   }
 });
@@ -151,4 +151,4 @@ client.on('message', message => {
               message.react("👎");
              }
 });
-client.login(process.env.TOKEN);
+client.login('NjQyODk0ODExODYyNTMyMTI3.XcfdOg.v7IueW8sbVukp3ppHGk_Ws7A0c0');
