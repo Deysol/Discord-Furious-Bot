@@ -14,7 +14,7 @@ client.on('message', function(message) {
         if (message.member.hasPermission("MANAGE_ROLES")) {
             role = message.mentions.roles.first();
                 message.member.removeRole(role);
-                message.channel.send('Removed role to user');
+                message.channel.send('Removed role from user');
        }
    }
 }); 
