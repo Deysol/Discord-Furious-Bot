@@ -97,7 +97,7 @@ client.on('message', message => {
 client.on('message', message=> {
     if (message.isMentioned(client.users.get('579108689852760087'))) {
     message.reply('Do not ping Furious!');
-    message.delete(1000);
+    message.delete(10000);
   }
 });
 
