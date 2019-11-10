@@ -48,13 +48,23 @@ client.on('message', function(message) {
 
 }); 
 client.on('message', message => {
+    if(message.content === "d!ping") {
+            message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
+    }
+});
+client.on('message', message => {
+  if (message.content === 'f!test') {
+    message.channel.send('Furious bot is online');
+  }
+});
+client.on('message', message => {
   if (message.content === 'f!avatar') {
     message.reply(message.author.avatarURL);
   }
 });
 client.on('message', message => {
   if (message.content === 'f!help') {
-   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign - *Removes any staff related role you have*');
+   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign - *Removes any staff related role you have* \n f!ping - *Checks your ping* \n f!test - *Checks if the bot is online*');
  }
 });
 client.on('message', message => {
@@ -105,14 +115,34 @@ client.on('message', message => {
 // Auto-Replys
 client.on('message', message=> {
     if (message.isMentioned(client.users.get('579108689852760087'))) {
-    message.reply('Do not ping Furious!');
-    message.delete(1000);
+    message.delete(10000);
+    message.reply('Do not ping Furious!')
   }
 });
 
 
 
 // Other
+client.on('message', message => {
+  if (message.content === 'Hi') {
+    message.reply('Hey!');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'hi') {
+    message.reply('Hey!');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'Hello') {
+    message.reply('Hey!');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'hello') {
+    message.reply('Hey!');
+  }
+});
 client.on('message', message => {
         if (message.channel.id === '640071369673146368') {
               message.react("👍");
