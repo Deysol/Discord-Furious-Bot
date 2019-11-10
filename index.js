@@ -81,10 +81,10 @@ client.on('message', message => {
           console.error(err);
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply('That user isn't in this guild!');
       }
     } else {
-      message.reply('You didn\'t mention the user to kick!');
+      message.reply('You didn't mention the user to kick!');
     }
   }
 });
@@ -104,10 +104,10 @@ client.on('message', message => {
           console.error(err);
         });
       } else {
-        message.reply('That user isn\'t in this guild!');
+        message.reply('That user isn't in this guild!');
       }
     } else {
-      message.reply('You didn\'t mention the user to ban!');
+      message.reply('You didn't mention the user to ban!');
     }
   }
 });
@@ -115,7 +115,7 @@ client.on('message', message => {
 // Auto-Replys
 client.on('message', message=> {
     if (message.isMentioned(client.users.get('579108689852760087'))) {
-    message.delete(10000);
+    message.delete(100);
     message.reply('Do not ping Furious!')
   }
 });
