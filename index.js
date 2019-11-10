@@ -10,6 +10,24 @@ client.login(process.env.TOKEN);
 
 // Prefix-Replys  
 client.on('message', function(message) {
+    if (message.content.startsWith("f!delrole")) {
+        if (message.member.hasPermission("MANAGE_ROLES")) {
+            role = message.mentions.roles.first();
+                message.member.removeRole(role);
+                message.channel.send('Removed role to user');
+       }
+   }
+}); 
+client.on('message', function(message) {
+    if (message.content.startsWith("f!addrole")) {
+        if (message.member.hasPermission("MANAGE_ROLES")) {
+            role = message.mentions.roles.first();
+                message.member.addRole(role);
+                message.channel.send('Added role to user');
+       }
+   }
+});
+client.on('message', function(message) {
     if (message.content == "f!clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
             message.channel.fetchMessages()
