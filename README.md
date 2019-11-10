@@ -1,4 +1,2 @@
-# furious-bot
-# furious-bot
-## furious-bot
-[Test](https://www.google.com)
+# Furious-bot
+Furious bot was created by Swofty.
