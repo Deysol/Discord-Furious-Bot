@@ -1,13 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const auth = require('./auth.json');
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`Bot made by: Swofty`);
 });
 const prefix = 'f!';
-client.login(auth.token);
+client.login(process.env.TOKEN);
 
 // Prefix-Replys   
 client.on('message', message => {
