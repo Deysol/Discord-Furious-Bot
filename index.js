@@ -9,6 +9,16 @@ const prefix = 'f!';
 client.login(process.env.TOKEN);
 
 // Prefix-Replys  
+client.on('message', message => {
+  if (!message.guild) return;
+    if (message.member.hasPermission("ADMINISTRATOR")) {
+      if (message.content.startsWith('f!addrole')) {
+           const user = message.mentions.users.first();
+           const role = message.mentions.roles.first();
+             message.(user).addRole(role);
+    }
+  }
+};
 client.on('message', function(message) {
     if (message.content == "f!clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
@@ -27,7 +37,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'f!help') {
-   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat*');
+   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user*');
  }
 });
 client.on('message', message => {
