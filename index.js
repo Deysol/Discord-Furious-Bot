@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+require('events').EventEmitter.defaultMaxListeners = 20;
+
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
