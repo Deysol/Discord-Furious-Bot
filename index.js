@@ -6,9 +6,18 @@ client.on('ready', () => {
     console.log(`Bot made by: Swofty`);
 });
 const prefix = 'f!';
-client.login('NjQyODk0ODExODYyNTMyMTI3.XcdkfQ.fJQOvYgovvYj2sMRsAtA7i7ee90');
+client.login(process.env.TOKEN);
 
 // Prefix-Replys   
+client.on('message', function(message) {
+    if (message.content == "f!resign") {
+        if (message.member.hasPermission("ADMINISTRATOR")) {
+                message.reply('has resigned');
+                message.member.removeRoles('610598909596663818', '604228125299310627', '642276585382346757', '642352044744900612');                        
+        }
+    }
+
+}); 
 client.on('message', function(message) {
     if (message.content.startsWith("f!delrole")) {
         if (message.member.hasPermission("MANAGE_ROLES")) {
@@ -45,7 +54,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'f!help') {
-   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign *Removes any staff related role you have*');
+   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign - *Removes any staff related role you have*');
  }
 });
 client.on('message', message => {
@@ -112,4 +121,4 @@ client.on('message', message => {
               message.react("👎");
              }
 });
-client.login('NjQyODk0ODExODYyNTMyMTI3.XcdkfQ.fJQOvYgovvYj2sMRsAtA7i7ee90');
+client.login(process.env.TOKEN);
