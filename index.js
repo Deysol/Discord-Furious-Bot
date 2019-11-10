@@ -9,6 +9,16 @@ const prefix = 'f!';
 client.login(process.env.TOKEN);
 
 // Prefix-Replys  
+client.on('message', message => {
+  if (!message.guild) return;
+    if (message.member.hasPermission("ADMINISTRATOR")) {
+      if (message.content.startsWith('f!addrole')) {
+           const user = message.mentions.users.first();
+           const role = message.mentions.roles.first();
+             message.mentions.users.first.addRole(role);
+    }
+  }
+};
 client.on('message', function(message) {
     if (message.content == "f!clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
