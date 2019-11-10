@@ -6,15 +6,15 @@ client.on('ready', () => {
     console.log(`Bot made by: Swofty`);
 });
 const prefix = 'f!';
-client.login(process.env.TOKEN);
+client.login('NjQyODk0ODExODYyNTMyMTI3.XcdkfQ.fJQOvYgovvYj2sMRsAtA7i7ee90');
 
-// Prefix-Replys  
+// Prefix-Replys   
 client.on('message', function(message) {
     if (message.content.startsWith("f!delrole")) {
         if (message.member.hasPermission("MANAGE_ROLES")) {
             role = message.mentions.roles.first();
                 message.member.removeRole(role);
-                message.channel.send('Removed role from user');
+                message.channel.send('Removed role to user');
        }
    }
 }); 
@@ -26,7 +26,7 @@ client.on('message', function(message) {
                 message.channel.send('Added role to user');
        }
    }
-});
+}); 
 client.on('message', function(message) {
     if (message.content == "f!clear") {
         if (message.member.hasPermission("MANAGE_MESSAGES")) {
@@ -45,7 +45,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'f!help') {
-   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user*');
+   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign *Removes any staff related role you have*');
  }
 });
 client.on('message', message => {
@@ -97,7 +97,7 @@ client.on('message', message => {
 client.on('message', message=> {
     if (message.isMentioned(client.users.get('579108689852760087'))) {
     message.reply('Do not ping Furious!');
-    message.delete(10000);
+    message.delete(1000);
   }
 });
 
@@ -112,4 +112,4 @@ client.on('message', message => {
               message.react("👎");
              }
 });
-client.login(process.env.TOKEN);
+client.login('NjQyODk0ODExODYyNTMyMTI3.XcdkfQ.fJQOvYgovvYj2sMRsAtA7i7ee90');
