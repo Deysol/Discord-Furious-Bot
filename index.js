@@ -21,11 +21,17 @@ client.on('message', function(message) {
 
 }); 
 client.on('message', function(message) {
+    if (message.content === "f!howtobreathe") {
+              message.channel.send("Here is my recommended method of breathing: https://patrikedblad.com/habits/how-to-breathe/");
+        }
+    
+}); 
+client.on('message', function(message) {
     if (message.content.startsWith("f!delrole")) {
         if (message.member.hasPermission("MANAGE_ROLES")) {
             role = message.mentions.roles.first();
                 message.member.removeRole(role);
-                message.channel.send('Removed role to user');
+                message.channel.send('Removed role from user');
        }
    }
 }); 
@@ -66,7 +72,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'f!help') {
-   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign - *Removes any staff related role you have* \n f!ping - *Checks your ping* \n f!test - *Checks if the bot is online*');
+   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign - *Removes any staff related role you have* \n f!ping - *Checks your ping* \n f!test - *Checks if the bot is online* \n f!howtobreathe - *Teaches you how to breathe*');
  }
 });
 client.on('message', message => {
