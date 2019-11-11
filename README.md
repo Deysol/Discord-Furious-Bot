@@ -1,2 +1,2 @@
-"# furious-bot" 
-"# furious-bot" 
+# Furious-bot
+Furious bot was created by Swofty.
