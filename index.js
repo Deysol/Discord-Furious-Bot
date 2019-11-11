@@ -8,7 +8,7 @@ client.on('ready', () => {
     console.log(`Bot made by: Swofty`);
 });
 const prefix = 'f!';
-client.login(process.env.TOKEN);
+client.login('NjQyODk0ODExODYyNTMyMTI3.XcfdOg.v7IueW8sbVukp3ppHGk_Ws7A0c0');
 
 // Prefix-Replys   
 client.on('message', function(message) {
@@ -50,7 +50,7 @@ client.on('message', function(message) {
 
 }); 
 client.on('message', message => {
-    if(message.content === "d!ping") {
+    if(message.content === "f!ping") {
             message.channel.send(new Date().getTime() - message.createdTimestamp + " ms");        
     }
 });
@@ -153,4 +153,4 @@ client.on('message', message => {
               message.react("👎");
              }
 });
-client.login(process.env.TOKEN);
+client.login('NjQyODk0ODExODYyNTMyMTI3.XcfdOg.v7IueW8sbVukp3ppHGk_Ws7A0c0');
