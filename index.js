@@ -72,7 +72,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'f!help') {
-   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign - *Removes any staff related role you have* \n f!ping - *Checks your ping* \n f!test - *Checks if the bot is online* \n f!howtobreathe - *Teaches you how to breathe*');
+   message.channel.send('**Commands** \n f!help - *Helps you with the commands* \n f!avatar - *Gives you your avatar* \n f!kick - *Kicks the designated player* \n f!ban - *Bans the designated player* \n f!clear - *Clears the ENTIRE chat* \n f!addrole - *Adds a role to a user* \n f!delrole - *Removes a role from a user* \n f!resign - *Removes any staff related role you have* \n f!ping - *Checks your ping* \n f!test - *Checks if the bot is online* \n f!howtobreathe - *Teaches you how to breathe* \n f!meme - *Sends a meme because Furious doesnt want dank memer*');
  }
 });
 client.on('message', message => {
