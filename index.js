@@ -9,7 +9,7 @@ client.on('ready', () => {
     console.log(`Bot made by: Swofty`);
 });
 const prefix = 'f!';
-client.login('NjQyODk0ODExODYyNTMyMTI3.XcfdOg.v7IueW8sbVukp3ppHGk_Ws7A0c0');
+client.login(process.env.TOKEN);
 
 // Prefix-Replys
 client.on('message', function(message) {
