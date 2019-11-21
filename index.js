@@ -4,6 +4,7 @@ require('events').EventEmitter.defaultMaxListeners = 20;
 
 
 client.on('ready', () => {
+    client.user.setActivity('f!help | Watching 2')
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`Bot made by: Swofty`);
 });
@@ -121,6 +122,12 @@ client.on('message', message => {
 });
 
 // Auto-Replys
+client.on('message', message=> {
+    if (message.isMentioned(client.users.get('574090926985576448'))) {
+    message.delete(100);
+    message.reply('Do not ping Swofty! Multiple offences will result in a permanent mute')
+  }
+});
 
 client.on('message', message=> {
     if (message.isMentioned(client.users.get('579108689852760087'))) {
@@ -132,12 +139,6 @@ client.on('message', message=> {
 
 
 // Other
-client.on('message', message=> {
-    if (message.isMentioned(client.users.get('574090926985576448'))) {
-    message.delete(100);
-    message.reply('Do not ping Swofty! Multiple offences will result in a permanent mute')
-  }
-});
 client.on('message', message => {
   if (message.content === 'Hi') {
     message.reply('Hey!');
@@ -166,4 +167,3 @@ client.on('message', message => {
               message.react("👎");
              }
 });
-client.login(process.env.TOKEN);
