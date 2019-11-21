@@ -174,4 +174,3 @@ client.on('message', message => {
               message.react("👎");
              }
 });
-client.login('NjQyODk0ODExODYyNTMyMTI3.XcfdOg.v7IueW8sbVukp3ppHGk_Ws7A0c0');
