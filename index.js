@@ -123,13 +123,6 @@ client.on('message', message => {
 
 // Auto-Replys
 client.on('message', message=> {
-    if (message.isMentioned(client.users.get('574090926985576448'))) {
-    message.delete(100);
-    message.reply('Do not ping Swofty! Multiple offences will result in a permanent mute')
-  }
-});
-
-client.on('message', message=> {
     if (message.isMentioned(client.users.get('579108689852760087'))) {
     message.delete(100);
     message.reply('Do not ping Furious!')
