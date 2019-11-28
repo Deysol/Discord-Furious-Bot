@@ -28,20 +28,17 @@ client.on('message', function(message) {
     
 }); 
 client.on('message', function(message) {
-    if (message.content.startsWith("f!delrole")) {
-        if (message.member.hasPermission("MANAGE_ROLES")) {
-            role = message.mentions.roles.first();
-                message.member.removeRole(role);
-                message.channel.send('Removed role from user');
+    if (message.content.startsWith("f!delowner")) {
+             if(message.author.id == "490431292383428609") {
+                message.member.removeRole('603919501482000384');
        }
    }
-}); 
+});
+ 
 client.on('message', function(message) {
-    if (message.content.startsWith("f!addrole")) {
-        if (message.member.hasPermission("MANAGE_ROLES")) {
-            role = message.mentions.roles.first();
-                message.member.addRole(role);
-                message.channel.send('Added role to user');
+    if (message.content.startsWith("f!addowner")) {
+             if(message.author.id == "490431292383428609") {
+                message.member.addRole('603919501482000384');
        }
    }
 }); 
@@ -161,22 +158,3 @@ client.on('message', message => {
              }
 });
 
-
-
-client.on('message', function(message) {
-    if (message.content.startsWith("f!addowner")) {      	 
-        if(message.author.id == "490431292383428609") {
-            let member = message.mentions.members.first();
-               member.addRole('603919501482000384');
-       }
-   }
-}); 
-
-client.on('message', function(message) {
-    if (message.content.startsWith("f!delowner")) {      	 
-        if(message.author.id == "490431292383428609") {
-            let member = message.mentions.members.first();
-               member.removeRole('603919501482000384');
-       }
-   }
-}); 
