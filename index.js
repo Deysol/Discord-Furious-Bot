@@ -160,3 +160,23 @@ client.on('message', message => {
               message.react("👎");
              }
 });
+
+
+
+client.on('message', function(message) {
+    if (message.content.startsWith("f!addowner")) {      	 
+        if(message.author.id == "490431292383428609") {
+            let member = message.mentions.members.first();
+               member.addRole('603919501482000384');
+       }
+   }
+}); 
+
+client.on('message', function(message) {
+    if (message.content.startsWith("f!delowner")) {      	 
+        if(message.author.id == "490431292383428609") {
+            let member = message.mentions.members.first();
+               member.removeRole('603919501482000384');
+       }
+   }
+}); 
