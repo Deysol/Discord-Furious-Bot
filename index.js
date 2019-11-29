@@ -4,7 +4,7 @@ require('events').EventEmitter.defaultMaxListeners = 20;
 
 
 client.on('ready', () => {
-    client.user.setActivity('f!help | Watching 2')
+    client.user.setActivity(`f!help | ${client.guilds.size} servers`)
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`Bot made by: Swofty`);
 });
