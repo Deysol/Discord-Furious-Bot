@@ -150,7 +150,7 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-        if (message.channel.id === '640071369673146368') {
+        if (message.channel.id === '649924355618373662') {
               message.react("👍");
               setTimeout(function() {
                 }, 10000);
